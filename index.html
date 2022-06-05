@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OMLIST</title>
+	<script src="https://kit.fontawesome.com/c3ab1941b4.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="https://img.icons8.com/color/100/4a90e2/zubat.png" type="image/x-icon">
+
+	<!-- CSS引用 -->
+	<link rel="stylesheet" type="text/css" href="css/CSS-Reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- JQUERY引用 -->
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+  	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+
+  	<!-- JS引用 (enquire用於CSS媒體查詢)-->
+  	<script language=JavaScript src="js/enquire.min.js"></script>
+  	<script language=JavaScript src="js/enquire.js"></script>
+  	<script language=JavaScript src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<!---- header ---->
+<div class="header">
+	<div class="header-center">
+		<img class="hambur" src="img/hambur.svg" alt="hambur"  onclick="openNav()">
+		<a class="logo" href="follow.html" target="aaa"><img src="img/OMLIST.svg" alt="OMLIST LOGO"></a>
+		<div class="user-block">
+			<span>Hey,Nina!</span>
+			<!-- <a class="message" href="#" target="_blank">
+				<img src="img/bell.svg" alt="bell">
+				<span class="message-count">10</span>
+			</a> -->
+			<a href="#" target="_blank"><img src="img/user.svg" alt="user"></a>
+		</div>
+	</div>
+</div>
+
+<!---- navbar ---->
+<div class="navbar">
+  	<div class="mask"></div>
+	<nav id="mySidenav" class="navbar-center">
+		<div class="closebtn">
+			<a href="javascript:void(0)"  onclick="closeNav()">&times;</a>
+		</div>
+		
+		<!---- 以下開始下拉單 ---->
+
+		<div class="d">
+			<div class="d-div">
+				常用連結
+				<i class="fas fa-angle-down"></i>
+			</div>
+
+			<div class="d-content">
+				<div class="column">
+					<h3>連結群組A</h3>
+					<a href="http://192.168.1.51:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.52:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="https://61.67.249.22/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.51:2051/CCGLCBADM/Monitor/" target="_blank">LINK</a>
+				</div>
+
+
+				<div class="column">
+					<h3>連結群組B</h3>
+					<a href="http://192.168.1.93:8080/CBAPMonitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.173:8080/CCGLCBAPMonitor/indexSI.jsp" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:8888/" target="_blank">LINK</a>
+				</div>
+
+				<div class="column">
+					<h3>連結群組C</h3>
+					<a href="http://172.18.1.149/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:5566/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:27935/SFSMonitor.html" target="_blank">LINK</a>
+					<a href="http://172.18.1.203/cacti/plugins/monitor/monitor.php" target="_blank">
+						LINK
+					<span class="tooltiptext">tip:xxxxxx</span>
+					</a>
+					<a href="http://172.18.1.236/cacti/graph_view.php?action=tree&node=tree_anchor-2&hgd=&hyper=true" target="_blank">LINK</a>
+
+				</div>
+
+				<div class="column">
+					<h3>連結群組D</h3>
+					<a href="http://color-ball-168.appspot.com/" target="_blank">LINK</a>
+					<a href="http://192.168.1.95:8080/" target="_blank">LINK</a>
+					<a href="http://192.168.1.97:8080/" target="_blank">
+						LINK_TIP
+						<span class="tooltiptext">TipTip</span>
+					</a>
+					<a href="http://192.168.1.72:8080/" target="_blank">LINK</a>
+					<a href="http://cb-closetime.appspot.com/listToHenry.jsp" target="_blank">LINK</a>
+					<a href="https://eproceedcom.sharepoint.com/:x:/s/PD1/EVuNfWhhRQVFsF5Wc2r3CE0BdxdpAps83o2yFTIGThNRWQ?e=Clv4OK" target="_blank">LINK</a>
+				</div>
+					
+			</div><!--d-content 結尾--->
+		</div><!--d 結尾-->
+
+
+		<!-- 需求/紀錄表/彩球文件 -->
+		<div class="d">
+			<div class="d-div">
+				SOP文件/需求表
+				<i class="fas fa-angle-down"></i>
+			</div>
+
+			<div class="d-content">
+				<div class="column">
+					<h3>連結群組A</h3>
+					<a href="http://192.168.1.51:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.52:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="https://61.67.249.22/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.51:2051/CCGLCBADM/Monitor/" target="_blank">LINK</a>
+				</div>
+
+
+				<div class="column">
+					<h3>連結群組B</h3>
+					<a href="http://192.168.1.93:8080/CBAPMonitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.173:8080/CCGLCBAPMonitor/indexSI.jsp" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:8888/" target="_blank">LINK</a>
+				</div>
+
+				<div class="column">
+					<h3>連結群組C</h3>
+					<a href="http://172.18.1.149/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:5566/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:27935/SFSMonitor.html" target="_blank">LINK</a>
+					<a href="http://172.18.1.203/cacti/plugins/monitor/monitor.php" target="_blank">
+						LINK
+					<span class="tooltiptext">tip:xxxxxx</span>
+					</a>
+					<a href="http://172.18.1.236/cacti/graph_view.php?action=tree&node=tree_anchor-2&hgd=&hyper=true" target="_blank">LINK</a>
+
+				</div>
+
+				<div class="column">
+					<h3>連結群組D</h3>
+					<a href="http://color-ball-168.appspot.com/" target="_blank">LINK</a>
+					<a href="http://192.168.1.95:8080/" target="_blank">LINK</a>
+					<a href="http://192.168.1.97:8080/" target="_blank">
+						LINK_TIP
+						<span class="tooltiptext">TipTip</span>
+					</a>
+					<a href="http://192.168.1.72:8080/" target="_blank">LINK</a>
+					<a href="http://cb-closetime.appspot.com/listToHenry.jsp" target="_blank">LINK</a>
+					<a href="https://eproceedcom.sharepoint.com/:x:/s/PD1/EVuNfWhhRQVFsF5Wc2r3CE0BdxdpAps83o2yFTIGThNRWQ?e=Clv4OK" target="_blank">LINK</a>
+				</div>
+					
+			</div><!--d-content 結尾--->
+		</div><!--d 結尾-->		
+
+
+		<!-- 會員/業主站 -->
+		<div class="d">
+			<div class="d-div">
+				平台網站
+				<i class="fas fa-angle-down"></i>
+			</div>
+
+			<div class="d-content">
+				<div class="column">
+					<h3>連結群組A</h3>
+					<a href="http://192.168.1.51:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.52:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="https://61.67.249.22/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.51:2051/CCGLCBADM/Monitor/" target="_blank">LINK</a>
+				</div>
+
+
+				<div class="column">
+					<h3>連結群組B</h3>
+					<a href="http://192.168.1.93:8080/CBAPMonitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.173:8080/CCGLCBAPMonitor/indexSI.jsp" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:8888/" target="_blank">LINK</a>
+				</div>
+
+				<div class="column">
+					<h3>連結群組C</h3>
+					<a href="http://172.18.1.149/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:5566/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:27935/SFSMonitor.html" target="_blank">LINK</a>
+					<a href="http://172.18.1.203/cacti/plugins/monitor/monitor.php" target="_blank">
+						LINK
+					<span class="tooltiptext">tip:xxxxxx</span>
+					</a>
+					<a href="http://172.18.1.236/cacti/graph_view.php?action=tree&node=tree_anchor-2&hgd=&hyper=true" target="_blank">LINK</a>
+
+				</div>
+
+				<div class="column">
+					<h3>連結群組D</h3>
+					<a href="http://color-ball-168.appspot.com/" target="_blank">LINK</a>
+					<a href="http://192.168.1.95:8080/" target="_blank">LINK</a>
+					<a href="http://192.168.1.97:8080/" target="_blank">
+						LINK_TIP
+						<span class="tooltiptext">TipTip</span>
+					</a>
+					<a href="http://192.168.1.72:8080/" target="_blank">LINK</a>
+					<a href="http://cb-closetime.appspot.com/listToHenry.jsp" target="_blank">LINK</a>
+					<a href="https://eproceedcom.sharepoint.com/:x:/s/PD1/EVuNfWhhRQVFsF5Wc2r3CE0BdxdpAps83o2yFTIGThNRWQ?e=Clv4OK" target="_blank">LINK</a>
+				</div>
+					
+			</div><!--d-content 結尾--->
+		</div><!--d 結尾-->
+
+
+
+		<!-- OM工具 -->
+		<div class="d">
+
+			<div class="d-div">
+				相關工具
+				<i class="fas fa-angle-down"></i>
+			</div>
+
+			<div class="d-content">
+				<div class="column">
+					<h3>維運</h3>
+					<a href="http://192.168.1.51:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.52:2021/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="https://61.67.249.22/ROT/Monitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.51:2051/CCGLCBADM/Monitor/" target="_blank">LINK</a>
+				</div>
+
+
+				<div class="column">
+					<h3>網址、線路</h3>
+					<a href="http://192.168.1.93:8080/CBAPMonitor/" target="_blank">LINK</a>
+					<a href="http://192.168.1.173:8080/CCGLCBAPMonitor/indexSI.jsp" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:8888/" target="_blank">LINK</a>
+				</div>
+
+				<div class="column">
+					<h3>資料庫</h3>
+					<a href="http://172.18.1.149/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:5566/" target="_blank">LINK</a>
+					<a href="http://192.168.1.30:27935/SFSMonitor.html" target="_blank">LINK</a>
+					<a href="http://172.18.1.203/cacti/plugins/monitor/monitor.php" target="_blank">
+						LINK
+					<span class="tooltiptext">tip:xxxxxx</span>
+					</a>
+					<a href="http://172.18.1.236/cacti/graph_view.php?action=tree&node=tree_anchor-2&hgd=&hyper=true" target="_blank">LINK</a>
+
+				</div>
+					
+			</div><!--d-content 結尾--->
+		</div><!--d 結尾-->
+	</nav>
+</div>
+
+
+
+<!--iframe-->
+<iframe name="aaa" frameborder="0" src="follow.html"></iframe>
+
+
+</body>
+</html>

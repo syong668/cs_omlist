@@ -1,0 +1,85 @@
+{
+    "data":[
+        {
+            "status":"已結案",
+            "url2":"",
+            "pk_id":"2172",
+            "track":"",
+            "image":[
+                
+            ],
+            "mark":"",
+            "START_TIME":"2021-08-12 13:36:00.0",
+            "exception_log":"",
+            "kind":"客戶障礙",
+            "url":"https://google.com",
+            "product":"產品A,網路,",
+            "MESSAGE":[
+                {
+                    "Time":"2021-08-12 13:37:41.0",
+                    "CONTENT":"經網路組查詢，當時線路不穩導致，已做線路調整",
+                    "ACCOUNT":"nina"
+                }
+            ],
+            "effect":"無",
+            "principal":"om",
+            "description":"客戶反映：產品A的無法登入，呈現一片空白",
+            "recorder":"nina",
+            "END_TIME":"2021-08-12 13:37:00.0"
+        },
+         {
+            "status":"未結案",
+            "url2":"",
+            "pk_id":"2170",
+            "track":"",
+            "image":[
+               
+            ],
+            "mark":"",
+            "START_TIME":"2021-08-12 00:21:16.0",
+            "exception_log":"",
+            "kind":"程式障礙",
+            "url":"https://google.com",
+            "product":"產品D,",
+            "MESSAGE":[
+               {
+                  "Time":"2021-08-12 07:55:47.0",
+                  "CONTENT":"已發布公告，並即時通知客戶",
+                  "ACCOUNT":"neil"
+               }
+            ],
+            "effect":"有",
+            "principal":"Anya",
+            "description":"技術窗口今日發現產品D有bug，正在修復中，請通知客戶產品D緊急維護中。",
+            "recorder":"neil",
+            "END_TIME":"2021-08-12 00:21:16.0"
+         },
+         {
+            "status":"已結案",
+            "url2":"",
+            "pk_id":"2167",
+            "track":"",
+            "image":[
+               
+            ],
+            "mark":"",
+            "START_TIME":"2021-08-11 21:23:00.0",
+            "exception_log":"",
+            "kind":"SI障礙",
+            "url":"",
+            "product":"產品C,網路",
+            "MESSAGE":[
+               {
+                  "Time":"2021-08-11 21:39:49.0",
+                  "CONTENT":"經系統組測試發現網路連線不順，請網路組緊急換線處理。",
+                  "ACCOUNT":"moose"
+               }
+            ],
+            "effect":"有",
+            "principal":"Gilbert,Bang",
+            "description":"機器C 發生連線異常。",
+            "recorder":"moose",
+            "END_TIME":"2021-08-11 21:38:00.0"
+         }
+    ]
+}

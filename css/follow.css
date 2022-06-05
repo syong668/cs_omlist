@@ -1,0 +1,267 @@
+div,h3,h2,span,img{border: 0px solid #000;}/*確認位置用*/
+body{
+  background-color: #F3F2F7;
+  font-size: 16px;
+}
+
+.center{
+  max-width: 1080px;
+  margin: 0px auto;
+}
+
+.bg{
+  background-color: #FFF;
+  box-shadow: 3px 3px 5px #0000001A;
+}
+
+.submit-btn{
+  height: 30px;
+  border: 0px;
+  padding: 0px 10px;
+  background-color: #088178;
+  color: #FFF;
+}
+
+.submit-btn:hover{background-color: grey;}
+
+/*篩選區塊*/
+.filter{
+  margin: 53px 0px;
+  padding: 0px 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-block{
+  width: 33.3%;
+  margin-top: 10px;
+  position: relative;
+}
+    @media( max-width: 1000px){
+      .filter-block{width: 50%;}
+    }
+
+    @media( max-width: 768px){
+      .filter-block{width: 100%;}
+    }
+
+.filter-block > input[type="button"]{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+    @media( max-width: 768px){
+      .filter-block > input[type="button"]{position: static;}
+    }
+
+
+.date,.radiostyle,.checkboxstyle,select,input[type="text"]{
+  height: 30px;
+  border: 1px solid #CED4DA;
+}
+
+.date,input[type="text"]{width: 90%;}
+select{width: 45%;}
+
+.filter-input{display: flex;}
+
+input[type="radio"],input[type="checkbox"]{
+  display: none;
+}
+
+.radiostyle,.checkboxstyle{
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.mgleft0{margin-left: 0px;}
+
+/*用label造形狀 radio未被點選樣貌*/
+.radiostyle:before{ 
+  content: "";
+  height: 16px;
+  width: 16px;
+  border: 1px solid #CED4DA;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/*radio checkbox 被點選label底色與框線樣貌*/
+input[type="radio"]:checked + .radiostyle,
+input[type="checkbox"]:checked + .checkboxstyle{
+  background-color: #088178;
+  color: #fff;
+  border: 1px solid #088178;
+}
+
+/*radio被點選 label樣貌*/
+input[type="radio"]:checked + .radiostyle:before{
+  height: 16px;
+  width: 16px;
+  border: 4px solid #FFF;
+  background-color: #088178;
+}
+
+/* checkbox */
+
+/*裡面那顆小方框*/
+input[type=checkbox] + .checkboxstyle:before {
+  content: "";
+  display: inline-block;
+  border: 1px solid #CED4DA;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 5px 0 0;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input[type=checkbox] + .checkboxstyle:before {
+  content: "\2713";
+  color: transparent;
+}
+
+input[type=checkbox]:checked + .checkboxstyle:before {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*----事件區塊----*/
+.case{margin-bottom: 30px ;}
+.tag-bg{background-color: #68729B;}
+.affect-bg{background-color: #FF6B00;}
+.dragon-bg{background-color: #FC4B50;}
+.h2color{color: #FC4B50;}
+.titlesize{font-size: 18px;}
+.textbold{font-weight: bold;}
+.grey{background-color: #E6E6E6;}
+
+.status{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px 5px 25px;
+}
+
+.status > .left{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+    @media(max-width: 768px){
+      .left>h2, .left>span{
+        width:100%;
+      }
+    }
+
+.right > img{display: block; padding: 15px 10px;}
+
+.tag{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 25px 0px;
+}
+
+.tag > span{font-size: 16px; font-weight: normal;}
+
+.tag > span + span{margin-left: 5px;}
+
+.explain{padding: 10px 25px; word-break: break-all;}
+
+.p-25{padding: 0px 25px;}
+
+.recorder{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.link{display: flex;}
+.link a{color: #4FA0D8}
+.link a + a{margin-left: 10px;}
+
+.detail-btn{background-color: #E6E6E6; cursor: pointer;}
+
+.rename{
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail{display:none;}
+
+h1{font-size: 28px;}
+
+.reply{padding: 20px 25px;}
+
+.reply > textarea{margin-bottom:10px ;}
+
+.add{
+  width: 50px;
+  height: 50px;
+  background-color: #088178;
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+}
+
+.add > i{color: #FFF; font-size: 20px;}
+
+.form-block{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form-block > .wl{width: 15%;}
+.form-block > .wr{width: 85%;}
+
+    @media(max-width: 992px){
+        .form-block > .wl,.form-block > .wr{
+          width: 100%;
+        }
+    }
+
+
+.sort-style{ 
+  padding: 0px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+    @media (max-width:375px){
+      .sort-style{margin-left: 0px;}
+    }
+
+input[type="checkbox"]:checked + .sort-style{
+  background-color: #C0DFDC;
+  color: #088178;
+  border: 1px solid #FFF;
+}
+
+input[type="datetime-local"]{height: 30px;}
+
+.sort{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.form-flex{display: flex; flex-wrap: wrap;}
+
+.form-endtime,.form-endtime2{display: none;}
+
+
+/*上傳按鈕*/
+.wr button a{
+  display:block;
+  padding: 0px 10px;
+  text-decoration:none;
+  color:#000;
+}
+.wr button a:hover{color:#FFF;}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件追蹤</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/100/000000/bellsprout.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS載入 -->
+    <!-- jquery ui -->
+    <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+
+    <!-- date range -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <link href="lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/CSS-Reset.css" />
+    <!--請勿更動順序-->
+    <link rel="stylesheet" type="text/css" href="css/follow.css" />
+  </head>
+
+  <body>
+    <div class="center">
+      <!--篩選區塊(filter)-->
+      <div class="filter bg">
+        <div class="filter-block">
+          <h3>日期</h3>
+          <div class="filter-input">
+            <input class="date" type="text" name="datefilter" value="" />
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h3>事件狀態</h3>
+
+          <div class="filter-input">
+            <input type="radio" name="status" value="" id="end" />
+            <label class="radiostyle mgleft0" for="end">已結案</label>
+
+            <input type="radio" name="status" value="" id="notend" />
+            <label class="radiostyle" for="notend">未結案</label>
+
+            <input type="checkbox" name="" value="" id="follow" />
+            <label class="checkboxstyle" for="follow">持續追蹤</label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h3>是否影響線上</h3>
+
+          <div class="filter-input">
+            <input type="radio" name="affect" value="" id="yes" />
+            <label class="radiostyle mgleft0" for="yes">有</label>
+
+            <input type="radio" name="affect" value="" id="no" />
+            <label class="radiostyle" for="no">無</label>
+
+            <input type="checkbox" name="" value="" id="dg" />
+            <label class="checkboxstyle" for="dg">災害等級龍</label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <h3>產品事件與種類</h3>
+          <select>
+            <option selected disabled="disabled">請選擇產品</option>
+            <optgroup label="平台A">
+              <option>產品A</option>
+              <option>產品B</option>
+              <option>產品C</option>
+            </optgroup>
+
+            <optgroup label="平台B">
+              <option>產品D</option>
+              <option>產品E</option>
+              <option>產品F</option>
+            </optgroup>
+
+            <optgroup label="SI">
+              <option>網路</option>
+              <option>系統</option>
+              <option>資料庫</option>
+              <option>監控</option>
+            </optgroup>
+          </select>
+
+          <select>
+            <option selected disabled="disabled">請選擇種類</option>
+            <option value="">程式障礙</option>
+            <option value="">客戶障礙</option>
+            <option value="">SI障礙</option>
+          </select>
+        </div>
+
+        <div class="filter-block">
+          <h3>輸入關鍵字搜尋</h3>
+          <input type="text" name="" />
+        </div>
+
+        <div class="filter-block">
+          <input class="submit-btn" type="button" value="RESET" />
+        </div>
+      </div>
+      <!--filter END-->
+
+      <!--單則事件區塊(case)-->
+      <div id="followlist"></div>
+      <!--case end-->
+    </div>
+    <!--center勿刪-->
+
+    <!-- 新增事件的按鈕 -->
+    <button class="btn add" data-bs-toggle="modal" data-bs-target="#addcase">
+      <i class="bi bi-plus-lg"></i>
+    </button>
+
+    <!-- [編輯留言內容]彈出窗 -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="edit-process"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h1 class="modal-title" id="">EDIT REPLY</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="edit-reply"></div>
+          </div>
+
+          <div class="modal-footer border-0">
+            <button type="button" class="submit-btn" data-bs-dismiss="modal">
+              送出
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- [編輯事件內容]彈出窗 -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="editcase"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 px-4">
+            <h1 class="modal-title" id="staticBackdropLabel">EDIT CASE</h1>
+            <button
+              type="button"
+              class="btn-close rounded-circle grey"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body px-5 pt-0">
+            <!-- [編輯事件 表單] -->
+            <div id="edit-case"></div>
+          </div>
+
+          <div class="modal-footer border-0 px-5">
+            <button type="button" class="submit-btn" data-bs-dismiss="modal">
+              送出
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- [新增事件內容]彈出窗 -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="addcase"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 px-4">
+            <h1 class="modal-title" id="staticBackdropLabel">ADD NEW CASE</h1>
+            <button
+              type="button"
+              class="btn-close rounded-circle grey"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body px-5 pt-0">
+            <!-- [新增事件 表單] -->
+            <div id="add-case"></div>
+          </div>
+
+          <div class="modal-footer border-0 px-5">
+            <button type="button" class="submit-btn" data-bs-dismiss="modal">
+              送出
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js載入 -->
+    <!-- JQUERY -->
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <!-- date range -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- lightbox -->
+    <script src="lightbox2-2.11.3/src/js/lightbox.js"></script>
+
+    <script src="js/follow1.js"></script>
+    <!-- js -->
+  </body>
+</html>
